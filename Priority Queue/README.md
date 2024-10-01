@@ -52,11 +52,11 @@ Alg PQ-Sort(L)
 	
 1. P <- empty priority queue // 우선순위 큐 P 초기화
 2. while (!L.isEmpty()) // 입력 리스트 L의 원소를 P에 차례대로 삽입
-			e <- L.removeFirst()
-			P.insertItem(e)
+	e <- L.removeFirst()
+	P.insertItem(e)
 3. while (!P.isEmpty()) // P에서 최소 키를 가진 원소부터 차례로 삭제 후 L에 삽입
-			e <- P.removeMin()
-			L.addLast(e)
+	e <- P.removeMin()
+	L.addLast(e)
 4. return
 ```
 
@@ -95,11 +95,11 @@ Alg inPlaceSelectionSort(A)
 	output sorted array A
 	
 1. for pass <- 0 to n - 2
-			minLoc <- pass
-			for j <- (pass+1) to n - 1
-				if (A[j] < A[minLoc])
-					minLoc <- j
-			A[pass] <-> A[minLoc]
+	minLoc <- pass
+	for j <- (pass+1) to n - 1
+		if (A[j] < A[minLoc])
+			minLoc <- j
+	A[pass] <-> A[minLoc]
 2. return
 ```
 
@@ -116,12 +116,12 @@ Alg inPlaceInsertionSort(A)
 	output sorted array A
 	
 1. for pass <- 1 to n - 1
-			save <- A[pass]
-			j <- pass - 1
+	save <- A[pass]
+	j <- pass - 1
 			
-			while ((j >= 0) & (A[j] > save))
-				A[j+1] <- A[j]
-				j <- j - 1
-			A[j + 1] <- save
+	while ((j >= 0) & (A[j] > save))
+		A[j+1] <- A[j]
+		j <- j - 1
+	A[j + 1] <- save
 2. return
 ```
