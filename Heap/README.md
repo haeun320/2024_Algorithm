@@ -35,9 +35,9 @@ Alg upHeap(v)
 	output none
 	
 1. if (isRoot(v))
-		return
+	return
 2. if (key(v) >= key(parent(v))
-		return
+	return
 3. swapElements(v, parent(v))
 4. upHeap(parent(v))
 ```
@@ -50,7 +50,7 @@ Alg rBuildHeap(i)
 	output heap array H
 
 1. if (i > n) // 전역변수 n
-		return
+	return
 2. rBuildHeap(2i) // 현재 서브트리의 왼쪽 서브트리를 힙 생성
 3. rBuildHeap(2i + 1) // 현재 서브트리의 오른쪽 서브트리를 힙 생성
 4. downHeap(i) // 현재 서브트리의 루트와 좌우 서브트리를 합친 힙 생성
@@ -65,7 +65,7 @@ Alg buildHeap()
 	output heap array H
 	
 1. for i <- n/2 downto 1
-		downHeap(i)
+	downHeap(i)
 2. return
 ```
 
@@ -93,13 +93,13 @@ Alg downHeap(k)
 	output a heap with root v
 	
 1. if (isExternal(leftChild(v)) & isExternal(rightChild(v))
-		return
+	return
 2. smaller <- leftChild(v)
 3. if (isInternal(rightChild(v))
-		if (key(rightChild(v)) < key(smaller))
-			smaller <- rightChild(v)
+	if (key(rightChild(v)) < key(smaller))
+		smaller <- rightChild(v)
 4. if (key(v) <= key(smaller))
-		return
+	return
 5. swapElements(v, smaller)
 6. downHeap(smaller)
 ```
@@ -138,12 +138,12 @@ Alg downHeap(k)
 
 ```
 Alg inPlaceHeapSort(A)
-		input array A of n keys
-		output sorted array A
+	input array A of n keys
+	output sorted array A
 		
 1. buildHeap(A) // 1기
 2. for i <- n downto 2
-			A[1] <-> A[i]
-			downHeap(1, i-1) 
+	A[1] <-> A[i]
+	downHeap(1, i-1) 
 3. return
 ```
